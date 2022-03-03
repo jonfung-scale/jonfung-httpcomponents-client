@@ -448,7 +448,6 @@ public class TestRedirects extends LocalServerTestBase {
         assertThat(exception.getCause(), CoreMatchers.instanceOf(ProtocolException.class));
     }
 
-    @Test
     public void testRedirectWithCookie() throws Exception {
         final HttpHost target = start(null, requestHandler -> new RedirectingDecorator(
                 requestHandler,
